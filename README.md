@@ -61,8 +61,8 @@ POST   /api/gadgets/:id/self-destruct  # Initiate self-destruct sequence
 curl -X POST http://localhost:3000/api/auth/register \
 -H "Content-Type: application/json" \
 -d '{
-  "email": "agent@imf.com",
-  "password": "secret123"
+  "email": your email,
+  "password": your password,
 }'
 ```
 
@@ -71,8 +71,8 @@ curl -X POST http://localhost:3000/api/auth/register \
 curl -X POST http://localhost:3000/api/auth/login \
 -H "Content-Type: application/json" \
 -d '{
-  "email": "agent@imf.com",
-  "password": "secret123"
+  "email": your email,
+  "password": your password,
 }'
 ```
 
