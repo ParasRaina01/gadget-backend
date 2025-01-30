@@ -30,26 +30,3 @@ export const authenticateToken = (
     });
   }
 };
-
-// Optional: Add role-based authorization middleware
-export const requireRole = (roles: string[]) => {
-  return (req: Request, res: Response, next: NextFunction) => {
-    const user = (req as AuthenticatedRequest).user;
-    
-    if (!user) {
-      return res.status(401).json({
-        success: false,
-        error: 'Authentication required'
-      });
-    }
-
-    if (!roles.includes(user.role)) {
-      return res.status(403).json({
-        success: false,
-        error: 'Insufficient permissions'
-      });
-    }
-
-    next();
-  };
-}; 

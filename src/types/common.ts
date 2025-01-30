@@ -1,5 +1,3 @@
-import { UserRole } from '@prisma/client';
-
 export interface ApiResponse<T> {
   success: boolean;
   data?: T;
@@ -13,4 +11,4 @@ export interface AuthUser {
 
 export interface AuthenticatedRequest extends Express.Request {
   user?: AuthUser;
-} 
+}
